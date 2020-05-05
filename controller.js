@@ -32,3 +32,27 @@ exports.tampilmontirberdasarkanid = function(req, res){
             }
         }); 
 };
+
+//menampilkan semua data sparepart
+exports.tampilsemuadatasparepart = function(req,res){
+    connection.query('SELECT * FROM t_sparepart', function(error, rows, fileds){
+        if(error){
+            console.log(error);
+        }else {
+            response.ok(rows, res)
+        }
+    });
+};
+
+//menampilkan semua data montir
+exports.tampilsemuadatamontir= function(req,res){
+    connection.query('SELECT * FROM t_montir', function(error, rows, fileds){
+        if(error){
+            console.log(error);
+        }else {
+            response.ok(rows, res)
+        }
+    });
+};
+
+
