@@ -76,12 +76,11 @@ exports.tambahservis = function(req,res){
 
 //menginput data di tabel montir
 exports.tambahmontir = function(req,res){
-    var id_montir = req.body.id_montir;
     var nama_montir = req.body.nama_montir;
     var harga_perjam = req.body.harga_perjam;
 
-    connection.query('INSERT INTO t_montir (id_montir,nama_montir,harga_perjam) VALUES(?,?,?)',
-    [id_montir, nama_montir, harga_perjam],
+    connection.query('INSERT INTO t_montir (nama_montir,harga_perjam) VALUES(?,?)',
+    [ nama_montir, harga_perjam],
     function (error, rows, fields){
         if(error){
             console.log(error);
