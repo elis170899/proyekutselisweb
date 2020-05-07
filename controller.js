@@ -207,3 +207,23 @@ exports.ubahlevel = function(req,res){
             }
         });
 };
+
+//mengubah data servis berdasarkan id
+exports.ubahservis = function(req,res){
+    var id = req.body.id_servis;
+    var tgl_servis = req.body.tgl_servis;
+    var id_user = req.body.id_user;
+    var id_montir = req.body.id_montir;
+    var jumlah_sparepart = req.body.jumlah_sparepart;
+    var id_sparepart = req.body.id_sparepart;
+
+    connection.query('UPDATE t_servis SET tgl_servis=?, id_user=?, id_montir=?, jumlah_sparepart=?, id_sparepart=? WHERE id_servis=? ', 
+    [tgl_servis, id_user, id_montir, jumlah_sparepart, id_sparepart, id],
+        function(error, rows, fields){
+            if(error){
+                console.log(error);
+            }else{
+                response.ok("Berhasil Ubah Data Servis", res)
+            }
+        });
+};
