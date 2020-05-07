@@ -20,6 +20,8 @@ module.exports = function(app){
 
     app.route('/tambahservis')
     .post(jsonku.tambahservis);
-    
+
+    app.route('/tambahmontir')
+    .post(jsonku.tambahmontir);
 }
 
