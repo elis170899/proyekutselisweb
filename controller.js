@@ -191,3 +191,19 @@ exports.ubahuser = function(req,res){
             }
         });
 };
+
+//mengubah data level berdasarkan id
+exports.ubahlevel = function(req,res){
+    var id = req.body.id_level;
+    var nama_level = req.body.nama_level;
+
+    connection.query('UPDATE t_level SET nama_level=? WHERE id_level=? ', 
+    [nama_level, id],
+        function(error, rows, fields){
+            if(error){
+                console.log(error);
+            }else{
+                response.ok("Berhasil Ubah Data Level", res)
+            }
+        });
+};
