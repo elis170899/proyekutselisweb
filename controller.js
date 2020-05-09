@@ -253,3 +253,16 @@ exports.hapussparepart = function(req,res){
         }
     });
 }
+
+//Menghapus data user berdasarkan id
+exports.hapususer = function(req,res){
+    var id = req.body.id_user;
+    connection.query('DELETE FROM t_user WHERE id_user=?',[id],
+    function(error, rows, fields){
+        if(error){
+            console.log(error);
+        }else{
+            response.ok("Berhasil Hapus Data User!", res)
+        }
+    });
+}
