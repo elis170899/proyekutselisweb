@@ -13,7 +13,6 @@ exports.registrasi = function(req,res) {
         email: req.body.email,
         password: md5(req.body.password),
         level: req.body.level,
-        tanggal_daftar: new Date()
     }
 
     var query = "SELECT email FROM ?? WHERE ??=?";
