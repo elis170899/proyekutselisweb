@@ -16,6 +16,7 @@ routes(app);
  //daftar menu routes dari index
  app.use('/auth', require('./middleware'));
 
+
  app.listen(4000, () => {
      console.log(`Server started on port`);
  });
