@@ -17,6 +17,7 @@ router.post('/user/pelanggan/input/servis', verifikasi(), con.tambahservis);
 
 //Admin
 router.post('/user/admin/input/montir', verifikasi(), con.tambahmontir);
+router.post('/user/admin/input/sparepart', verifikasi(), con.tambahsparepart);
 
 
 module.exports = router;
