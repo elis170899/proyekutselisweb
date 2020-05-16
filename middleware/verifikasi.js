@@ -17,8 +17,12 @@ function verifikasi(){
                     if(level == 2){
                         req.auth = decoded;
                         next();
-                    }else {
-                        return rest.status(401).send({auth:false, message:'Gagal mengotorisasi level anda!'});
+                    }
+                        else if(level == 1){
+                            req.auth = decoded;
+                            next();
+                        }else {
+                            return rest.status(401).send({auth:false, message:'Gagal mengotorisasi level anda!'});
                     }
                 }
             });

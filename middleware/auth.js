@@ -96,5 +96,8 @@ exports.login = function(req,res){
 
 exports.halamanrahasia = function(req,res){
     response.ok("Halaman ini hanya untuk user dengan level = 2!",res);
-    
+}
+
+exports.halamanrahasia1 = function (req, res) {
+    response.ok("Halaman ini hanya untuk admin dengan level = 1!", res);
 }
