@@ -15,5 +15,8 @@ router.get('/api/v1/rahasia1', verifikasi(), auth.halamanrahasia1);
 //Pelanggan
 router.post('/user/pelanggan/input/servis', verifikasi(), con.tambahservis);
 
+//Admin
+router.post('/user/admin/input/montir', verifikasi(), con.tambahmontir);
+
 
 module.exports = router;
