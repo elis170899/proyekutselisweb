@@ -29,4 +29,6 @@ router.put('/user/admin/ubah/user', verifikasi(), con.ubahuser);
 router.put('/user/admin/ubah/level', verifikasi(), con.ubahlevel);
 router.put('/user/admin/ubah/servis', verifikasi(), con.ubahservis);
 
+router.delete('/user/admin/hapus/montir', verifikasi(), con.hapusmontir);
+
 module.exports = router;
