@@ -27,5 +27,6 @@ router.put('/user/admin/ubah/montir', verifikasi(), con.ubahmontir);
 router.put('/user/admin/ubah/sparepart', verifikasi(), con.ubahsparepart);
 router.put('/user/admin/ubah/user', verifikasi(), con.ubahuser);
 router.put('/user/admin/ubah/level', verifikasi(), con.ubahlevel);
+router.put('/user/admin/ubah/servis', verifikasi(), con.ubahservis);
 
 module.exports = router;
