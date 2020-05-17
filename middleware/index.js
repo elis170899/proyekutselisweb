@@ -23,4 +23,6 @@ router.post('/user/admin/input/level', verifikasi(), con.tambahlevel);
 router.post('/user/admin/input/servis', verifikasi(), con.tambahservis);
 
 
+router.put('/user/admin/ubah/montir', verifikasi(), con.ubahmontir);
+
 module.exports = router;
