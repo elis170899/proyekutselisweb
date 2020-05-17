@@ -35,4 +35,7 @@ router.delete('/user/admin/hapus/user', verifikasi(), con.hapususer);
 router.delete('/user/admin/hapus/level', verifikasi(), con.hapuslevel);
 router.delete('/user/admin/hapus/servis', verifikasi(), con.hapusservis);
 
+//hitung
+router.get('/tampil/totalservis',verifikasi(), auth.totalservis);
+
 module.exports = router;
