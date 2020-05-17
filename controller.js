@@ -113,9 +113,10 @@ exports.tambahuser = function(req,res){
     var email = req.body.email;
     var password = req.body.password;
     var level = req.body.level;
+    var tanggal_daftar = req.body.tanggal_daftar;
 
-    connection.query('INSERT INTO t_user (nama_user,email, password, level) VALUES(?,?,?,?)',
-    [nama_user, email, password, level],
+    connection.query('INSERT INTO t_user (nama_user,email, password, level, tanggal_daftar) VALUES(?,?,?,?,?)',
+    [nama_user, email, password, level, tanggal_daftar],
     function (error, rows, fields){
         if(error){
             console.log(error);
