@@ -24,5 +24,6 @@ router.post('/user/admin/input/servis', verifikasi(), con.tambahservis);
 
 
 router.put('/user/admin/ubah/montir', verifikasi(), con.ubahmontir);
+router.put('/user/admin/ubah/sparepart', verifikasi(), con.ubahsparepart);
 
 module.exports = router;
