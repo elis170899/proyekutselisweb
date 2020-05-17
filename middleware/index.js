@@ -32,5 +32,6 @@ router.put('/user/admin/ubah/servis', verifikasi(), con.ubahservis);
 router.delete('/user/admin/hapus/montir', verifikasi(), con.hapusmontir);
 router.delete('/user/admin/hapus/sparepart', verifikasi(), con.hapussparepart);
 router.delete('/user/admin/hapus/user', verifikasi(), con.hapususer);
+router.delete('/user/admin/hapus/level', verifikasi(), con.hapuslevel);
 
 module.exports = router;
