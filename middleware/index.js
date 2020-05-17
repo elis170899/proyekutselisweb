@@ -20,6 +20,7 @@ router.post('/user/admin/input/montir', verifikasi(), con.tambahmontir);
 router.post('/user/admin/input/sparepart', verifikasi(), con.tambahsparepart);
 router.post('/user/admin/input/user', verifikasi(), con.tambahuser);
 router.post('/user/admin/input/level', verifikasi(), con.tambahlevel);
+router.post('/user/admin/input/servis', verifikasi(), con.tambahservis);
 
 
 module.exports = router;
